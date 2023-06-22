@@ -1,7 +1,7 @@
 version: "3.9"
 
 services:    
-  # Juno testnet endpoints
+  # RPC Endpoints
   rpc:
     image: "reecepbcups/rpc-cache:0.0.10"
     network_mode: "host"
@@ -18,17 +18,17 @@ services:
       - RPC_LISTEN_ADDRESS=HIDDEN
       - NODE_MONIKER="testing"
       - NODE_TM_VERSION=HIDDEN
-      - COINGECKO_ENABLED=true
+#      - COINGECKO_ENABLED=true
       # - COINGECKO_API_KEY="HERE"
-      - COINGECKO_CACHE_SECONDS=6 # do not change if you do not have an API key.
-      - COINGECKO_IDS=cosmos,juno-network,osmosis,canto
-      - COINGECKO_FIAT=usd,eur,gbp
+#      - COINGECKO_CACHE_SECONDS=6 # do not change if you do not have an API key.
+#      - COINGECKO_IDS=cosmos,juno-network,osmosis,canto
+#      - COINGECKO_FIAT=usd,eur,gbp
       - RPC_TITLE=Docker RPC cache
-      - RPC_CUSTOM_TEXT=<a href="https://twitter.com/Reecepbcups_/status/1617396571188133888?s=20&t=OKi00IkStINFqYVweZXlaw">Custom caching solution active</a><br><a href="https://juno-api.reece.sh">My Juno REST API</a><br>
+#      - RPC_CUSTOM_TEXT=<a href="https://twitter.com/Reecepbcups_/status/1617396571188133888?s=20&t=OKi00IkStINFqYVweZXlaw">Custom caching solution active</a><br><a href="https://juno-api.reece.sh">My Juno REST API</a><br>
     ports:
       - "5001:5001"
 
-  # Juno mainnet endpoints
+  # Rest endpoint
   api:
     image: "reecepbcups/api-cache:0.0.10"
     network_mode: "host"
