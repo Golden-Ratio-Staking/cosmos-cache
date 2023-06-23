@@ -18,13 +18,13 @@ services:
       - RPC_LISTEN_ADDRESS=HIDDEN
       - NODE_MONIKER="testing"
       - NODE_TM_VERSION=HIDDEN
-#      - COINGECKO_ENABLED=true
-      # - COINGECKO_API_KEY="HERE"
+      - COINGECKO_ENABLED=false
+#      - COINGECKO_API_KEY="HERE"
 #      - COINGECKO_CACHE_SECONDS=6 # do not change if you do not have an API key.
 #      - COINGECKO_IDS=cosmos,juno-network,osmosis,canto
 #      - COINGECKO_FIAT=usd,eur,gbp
-      - RPC_TITLE=Docker RPC cache
-#      - RPC_CUSTOM_TEXT=<a href="https://twitter.com/Reecepbcups_/status/1617396571188133888?s=20&t=OKi00IkStINFqYVweZXlaw">Custom caching solution active</a><br><a href="https://juno-api.reece.sh">My Juno REST API</a><br>
+      - RPC_TITLE=<chain> RPC by Golden Ratio Staking  
+#      - RPC_CUSTOM_TEXT=<a href="https://twitter.com/Reecepbcups_/status/1617396571188133888?s=20&t=OKi00IkStINFqYVweZXlaw">Custom caching solution active</a><br><a href="https://juno-api.reece.sh">Juno REST API by Golden Ratio Staking</a><br>
     ports:
       - "5001:5001"
 
@@ -37,10 +37,10 @@ services:
       - REST_PREFIX=rest
       - REST_WORKER_THREADS=5
       - REST_URL=http://15.204.143.232:1317
-      - BACKUP_REST_URL=https://api.juno.strange.love
+      - BACKUP_REST_URL=http://15.204.143.232:1317
       - ENABLE_COUNTER=false
       - NODE_MONIKER="testing"
-      - API_TITLE=Docker REST
+      - API_TITLE=<chain> REST/API by Golden Ratio Staking
       - DISABLE_SWAGGER_UI=false
     ports:
       - "5000:5000"
