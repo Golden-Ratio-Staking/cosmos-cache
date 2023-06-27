@@ -16,7 +16,7 @@ services:
       - RPC_WEBSOCKET=ws://5.161.80.115:26657/websocket
       - BACKUP_RPC_WEBSOCKET=ws://5.161.80.115:26657/websocket
       - RPC_LISTEN_ADDRESS=HIDDEN
-      - NODE_MONIKER="testing"
+      - NODE_MONIKER="Cosmos Cache'd RPC"
       - NODE_TM_VERSION=HIDDEN
       - COINGECKO_ENABLED=false
 #      - COINGECKO_API_KEY="HERE"
@@ -39,7 +39,7 @@ services:
       - REST_URL=http://15.204.143.232:1317
       - BACKUP_REST_URL=http://15.204.143.232:1317
       - ENABLE_COUNTER=false
-      - NODE_MONIKER="testing"
+      - NODE_MONIKER="Cosmos Cache'd RPC"
       - API_TITLE=<chain> REST/API by Golden Ratio Staking
       - DISABLE_SWAGGER_UI=false
     ports:
