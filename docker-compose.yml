@@ -4,6 +4,7 @@ services:
   # RPC Endpoints
   rpc:
     image: "reecepbcups/rpc-cache:0.0.10"
+    restart: "always"
     network_mode: "host"
     environment:
       - REMOTE_CONFIG_TIME_FILE=https://raw.githubusercontent.com/Reecepbcups/cosmos-endpoint-cache/main/configs/cache_times.json       
@@ -31,6 +32,7 @@ services:
   # Rest endpoint
   api:
     image: "reecepbcups/api-cache:0.0.10"
+    restart: "always"
     network_mode: "host"
     environment:
       - REMOTE_CONFIG_TIME_FILE=https://raw.githubusercontent.com/Reecepbcups/cosmos-endpoint-cache/main/configs/cache_times.json      
